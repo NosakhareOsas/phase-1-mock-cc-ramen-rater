@@ -42,7 +42,7 @@ const initialize = () => {
 
             display.addEventListener('click', ()=>{
                 fetch(`http://localhost:3000/ramens/${element.id}`)
-                .then(response => response.json)
+                .then(response => response.json())
                 .then(() => {
                     //console.log(element.id)
                     img.src = element.image
@@ -59,7 +59,7 @@ const initialize = () => {
                         }
                         
                         fetch(`http://localhost:3000/ramens/${id.textContent}`,configurationObject)
-                        .then(response => response.json)
+                        .then(response => response.json())
                         .then(() => {
                             location.reload()
                         })
